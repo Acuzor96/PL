@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital of Companies</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-left: 40%;
+            margin-right: 40%;
+            margin-top: 20%;
+            background-color:antiquewhite;
+        }
+
+        label {
+            font-weight: bold;
+    font-size: 24px;
+    color: #5d975d;
+    margin-bottom: 30px;
+    display: block;
+        } 
+
+        select {
+            font-size: 17px;
+            padding: 10px;
+        } 
+
+        option:hover{
+            color: chocolate;
+        }
+
+        #capital {
+            font-size: 20px;
+    font-weight: bold;
+    color: #0066cc;
+    margin-top: 15px;
+        } 
+    </style>
+</head>
+<body>
+    <label for="companySelect : "> Select a Company </label>
+    <select id="companySelect" onchange="displayCapital()">
+    <option value="Reliance Industries Ltd">Reliance Industries Ltd</option>
+    <option value="Tata Consultancy Services Ltd">Tata Consultancy Services Ltd</option>
+    <option value="HDFC Bank Ltd">HDFC Bank Ltd</option>
+    <option value="Infosys Ltd">Infosys Ltd</option>
+    <option value="Hindustan Unilever Ltd">Hindustan Unilever Ltd</option>
+    </select>
+
+    <div id="capital"></div>
+
+    <script>
+        function displayCapital(){
+            var select = document.getElementById("companySelect");
+            var capitalDiv = document.getElementById("capital");
+            var selectedCompany = select.options[select.selectedIndex].text;
+
+            var capitalMap = {
+                "Reliance Industries Ltd" : "$19.28 trillion",
+                "Tata Consultancy Services Ltd" : "$14.41 trillion",
+                "HDFC Bank Ltd" : "$10.96 trillion",
+                "Infosys Ltd" : "$6.47 trillion",
+                "Hindustan Unilever Ltd" : "$5.29 trillion"
+            };
+
+            var capital = capitalMap[selectedCompany];
+            capitalDiv.textContent = "Capital: " + capital;
+        }
+    </script>
+</body>
+</html> 
