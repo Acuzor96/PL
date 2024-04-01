@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Registration Form</title>
+</head>
+<body>
+ <h2>IT Department ITSA Registration Form</h2>
+ <form action="submit_form.php" method="post" enctype="multipart/form-data">
+ <label for="username">Username:</label>
+ <input type="text" id="username" name="username" required><br><br>
+ <label for="address">Adress:</label>
+ <input type="text" name="address" id="address" ><br><br>
+ <label for="email">Email:</label>
+ <input type="email" id="email" name="email" required><br><br>
+ <label for="password">Password:</label>
+ <input type="password" id="password" name="password" required><br><br>
+ <label for="birthday">Birthdate:</label>
+ <input type="date" id="birthday" name="birthday" required><br><br>
+ <label for="number">Phone Number:</label>
+ <input type="number" id="number" name="number" required><br><br>
+ <label for="qualification"> Your-Qualification: </label>
+ <select name="qualification" id="qualification">
+    <option value="10th_pass">10th pass</option>
+    <option value="12th_pass">12th pass</option>
+    <option value="graduated">Graduated</option>
+    <option value="not_studied">padhai hi nhi hui</option>
+ </select><br><br>
+ <label>Gender:</label>
+ <input type="radio" id="male" name="gender" value="male" checked>
+ <label for="male">Male</label>
+ <input type="radio" id="female" name="gender" value="female">
+ <label for="female">Female</label><br><br>
+ <label for="country">Country:</label>
+ <select id="country" name="country">
+ <option value="usa">USA</option>
+ <option value="canada">Canada</option>
+ <option value="uk">UK</option>
+ <option value="India">India</option>
+ <option value="Pakistan">Pakistan</option>
+
+ </select><br><br>
+ <label>Languages u know:</label>
+ <input type="checkbox" id="english" name="language[]" value="english">
+ <label for="english">English</label>
+ <input type="checkbox" id="spanish" name="language[]" value="spanish">
+ <label for="spanish">Spanish</label>
+ <input type="checkbox">
+ <label for="marathi">Marathi</label>
+ <input type="checkbox">
+ <label for="hindi">Hindi</label>
+ <input type="checkbox">
+ <label for="urdu">Urdu</label>
+ <br><br>
+ <label for="profilePic">Profile Picture:</label>
+ <input type="file" id="profilePic" name="profilePic" accept="image/*"><br><br>
+ <input type="submit" value="Submit">
+ <input type="reset" value="Reset" style="margin-left: 10px;">
+ </form>
+</body>
+</html>
